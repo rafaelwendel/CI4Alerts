@@ -45,6 +45,35 @@ When you open `app/Config/Alerts.php`, you will find the following configuration
     *   `sessionMsgType`: Session key name (flashdata) used to store the message type.
     *   `template`: HTML template where the CSS class and message will be injected. Supports PHP formatting placeholders (`%s`) or replacement tags (`{class}` and `{message}`).
 
+### Adding Custom Configurations
+
+If you do not want to use any of the built-in libraries, you can easily define your own custom configurations by adding new keys to the `$config` array. To use a custom configuration, simply set the `$active` property to your custom key:
+
+```php
+public $active = 'my_custom_theme';
+
+public $config = [
+    // ...
+    'my_custom_theme' => [
+        'classSucess'    => 'my-custom-success-class',
+        'classError'     => 'my-custom-danger-class',
+        'classWarning'   => 'my-custom-warning-class',
+        'sessionMsg'     => 'msg',
+        'sessionMsgType' => 'msg_type',
+        'template'       => '<div class="%s">%s</div>',
+    ],
+];
+```
+
+You can then load your custom theme automatically:
+```php
+$alerts = service('alerts'); // Uses 'my_custom_theme'
+```
+Or load it explicitly by passing its key as an argument:
+```php
+$alerts = service('alerts', 'my_custom_theme');
+```
+
 ---
 
 ## Usage Examples
