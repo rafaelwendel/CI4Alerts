@@ -31,14 +31,6 @@ class Alerts
     public function __construct(array $config = [])
     {
         $this->session = \Config\Services::session();
-        try {
-            $configObj = config('Alerts');
-            if ($configObj && isset($configObj->config)) {
-                $this->config = array_merge($this->config, $configObj->config);
-            }
-        } catch (\Throwable $e) {
-            // Silence configuration load errors
-        }
         $this->config = array_merge($this->config, $config);
     }
 
