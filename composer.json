@@ -1,6 +1,6 @@
 {
     "name": "rafaelwendel/ci4alerts",
-    "description": "",
+    "description": "A helper to display message alerts in CodeIgniter 4 framework.",
     "keywords": [
         "codeigniter4",
         "php",
