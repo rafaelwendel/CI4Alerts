@@ -1,0 +1,32 @@
+{
+    "name": "rafaelwendel/ci4alerts",
+    "description": "",
+    "keywords": [
+        "codeigniter4",
+        "php",
+        "alerts",
+        "message"
+    ],
+    "version": "0.0.1",
+    "type": "library",
+    "homepage": "https://github.com/rafaelwendel/CI4Alerts",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rafael Wendel Pinheiro",
+            "email": "rafaelwendel@hotmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^8.0"
+    },
+    "require-dev": {
+        "codeigniter4/framework": "^4.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "CI4Alerts\\": "src/"
+        }
+    }
+}
