@@ -6,9 +6,9 @@ use CodeIgniter\Config\BaseService;
 use CI4Alerts\Alerts;
 
 /**
- * Services Configuration for CI4Auth
+ * Services Configuration for CI4Alerts
  *
- * This class registers the CI4Auth services for CodeIgniter 4.
+ * This class registers the CI4Alerts services for CodeIgniter 4.
  */
 class Services extends BaseService
 {

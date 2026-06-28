@@ -1,6 +1,6 @@
 <?php
 
-namespace Config;
+namespace CI4Alerts\Config;
 
 use CodeIgniter\Config\BaseConfig;
 
